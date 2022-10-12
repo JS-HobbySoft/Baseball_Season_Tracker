@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="game"
+            type="org.jshobbysoft.baseballseasontracker.GameViewModel" />
+        <variable
+            name="clickListener"
+            type="org.jshobbysoft.baseballseasontracker.GameListener" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_margin="10dp"
+        app:cardElevation="6dp"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/textViewLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/textview_label_item"
+                android:textSize="@dimen/cardViewTextSize"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/myTeamNameLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/myTeamNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/home_score"
+                android:textSize="@dimen/cardViewTextSize"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/textViewLabel"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--
+                    <TextView
+                        android:id="@+id/textViewHomeScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/textview_label_item"
+                        android:textSize="@dimen/cardViewTextSize"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/myTeamNameLabel"
+                        app:layout_constraintEnd_toStartOf="@id/awayTeamNameView"/>
+
+                    <TextView
+                        android:id="@+id/awayTeamNameView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/away_score"
+                        android:textSize="@dimen/cardViewTextSize"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/textViewHomeScore"
+                        app:layout_constraintEnd_toStartOf="@id/textViewAwayScore"/>
+
+                    <TextView
+                        android:id="@+id/textViewAwayScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/textview_label_item"
+                        android:textSize="@dimen/cardViewTextSize"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/awayTeamNameView"
+                        />
+            -->
+
+            <!--        Second line - hits-->
+
+            <TextView
+                android:id="@+id/myTeamNameHitsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/home_score"
+                android:textSize="@dimen/cardViewTextSize"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/textViewLabel"
+                app:layout_constraintTop_toBottomOf="@id/myTeamNameLabel" />
+
+            <!--
+                    <TextView
+                        android:id="@+id/textViewHomeHits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/textview_label_item"
+                        android:textSize="@dimen/cardViewTextSize"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@id/myTeamNameLabel"
+                        app:layout_constraintStart_toEndOf="@id/myTeamNameLabel"
+                        app:layout_constraintEnd_toStartOf="@id/awayTeamNameView"/>
+
+                    <TextView
+                        android:id="@+id/awayTeamNameHitsView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/away_score"
+                        android:textSize="@dimen/cardViewTextSize"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@id/myTeamNameLabel"
+                        app:layout_constraintStart_toEndOf="@id/textViewHomeScore"
+                        app:layout_constraintEnd_toStartOf="@id/textViewAwayScore"/>
+
+                    <TextView
+                        android:id="@+id/textViewAwayHits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/textview_label_item"
+                        android:textSize="@dimen/cardViewTextSize"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@id/myTeamNameLabel"
+                        app:layout_constraintStart_toEndOf="@id/awayTeamNameView"
+                        />
+            -->
+
+            <TextView
+                android:id="@+id/textViewGameNotes"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/home_score"
+                android:textSize="@dimen/cardViewTextSize"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/textViewLabel"
+                app:layout_constraintTop_toBottomOf="@id/myTeamNameHitsLabel" />
+
+            <Button
+                android:id="@+id/delButton"
+                android:layout_width="55dp"
+                android:layout_height="@dimen/button_height"
+                android:backgroundTint="@color/ltgray"
+                android:text="@string/buttonDeleteString"
+                android:textSize="11sp"
+                android:onClick="@{() -> clickListener.onClick(game)}"
+                app:icon="@drawable/ic_baseline_delete_24"
+                app:layout_constraintStart_toStartOf="@id/textViewLabel"
+                app:layout_constraintTop_toBottomOf="@id/textViewLabel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

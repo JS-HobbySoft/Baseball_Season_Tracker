@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment">
+
+    <EditText
+        android:id="@+id/overall_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="game info"
+        android:hint="@string/editText_home_team_label"
+        android:inputType="text"
+        android:textSize="@dimen/scoreLabelTextSize"
+        android:maxLength="10"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    Home score-->
+
+    <TextView
+        android:id="@+id/tV_homeScore"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:gravity="center"
+        android:text="@string/textview_home_score_label"
+        android:textSize="@dimen/scoreLabelTextSize"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/overall_label" />
+
+    <Button
+        android:id="@+id/button_minus_homeScore"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/button_home_score_minus"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/tV_homeScoreValue" />
+
+    <TextView
+        android:id="@+id/tV_homeScoreValue"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/score_height"
+        android:gravity="center"
+        android:text="@string/textview_home_score"
+        android:textSize="@dimen/scoreLabelTextSize"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/button_plus_homeScore" />
+
+    <Button
+        android:id="@+id/button_plus_homeScore"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/button_home_score_plus"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/tV_homeScore" />
+
+    <!--    Runs-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/score_height"
+        android:gravity="center"
+        android:text="@string/tvRunsLabel"
+        android:textSize="@dimen/scoreLabelTextSize"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/button_plus_homeScore" />
+
+    <!--    Hits-->
+    <TextView
+        android:id="@+id/tV_hitsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/hits_height"
+        android:gravity="center"
+        android:text="@string/hitsLabel"
+        android:textSize="@dimen/scoreLabelTextSize"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintBottom_toTopOf="@id/viewDivider"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider2" />
+
+    <!--    Home hits-->
+
+    <Button
+        android:id="@+id/button_minus_homeHits"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/button_home_score_minus"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/tV_homeHitsValue" />
+
+    <TextView
+        android:id="@+id/tV_homeHitsValue"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/hits_height"
+        android:gravity="center"
+        android:text="@string/textview_home_hits"
+        android:textSize="@dimen/scoreLabelTextSize"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/button_plus_homeHits" />
+
+    <Button
+        android:id="@+id/button_plus_homeHits"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/button_home_score_plus"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider2" />
+
+    <!--    Away score-->
+
+    <EditText
+        android:id="@+id/eT_AwayName"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:autofillHints="opponent"
+        android:hint="@string/OpponentName"
+        android:inputType="text"
+        android:textSize="@dimen/scoreLabelTextSize"
+        android:maxLength="8"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/overall_label" />
+
+    <Button
+        android:id="@+id/button_minus_awayScore"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/button_home_score_minus"
+        app:layout_constraintEnd_toStartOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@id/tV_awayScoreValue" />
+
+    <TextView
+        android:id="@+id/tV_awayScoreValue"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/score_height"
+        android:gravity="center"
+        android:text="@string/textview_away_score"
+        android:textSize="@dimen/scoreLabelTextSize"
+        app:layout_constraintEnd_toStartOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@id/button_plus_awayScore" />
+
+    <Button
+        android:id="@+id/button_plus_awayScore"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/button_home_score_plus"
+        app:layout_constraintEnd_toStartOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@id/eT_AwayName" />
+
+    <!--    Away hits-->
+
+    <Button
+        android:id="@+id/button_minus_awayHits"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/button_home_score_minus"
+        app:layout_constraintEnd_toStartOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@id/tV_awayHitsValue" />
+
+    <TextView
+        android:id="@+id/tV_awayHitsValue"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/hits_height"
+        android:gravity="center"
+        android:text="@string/textview_away_hits"
+        android:textSize="@dimen/scoreLabelTextSize"
+        app:layout_constraintEnd_toStartOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@id/button_plus_awayHits" />
+
+    <Button
+        android:id="@+id/button_plus_awayHits"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/button_home_score_plus"
+        app:layout_constraintEnd_toStartOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider2" />
+
+    <!--    View to divide innings from hits-->
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="@dimen/viewDividerWidth"
+        android:layout_height="8dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/button_minus_homeHits"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintEnd_toStartOf="@id/guideline6" />
+
+    <!--    View to divide runs from hits-->
+    <View
+        android:id="@+id/viewDivider2"
+        android:layout_width="@dimen/viewDividerWidth"
+        android:layout_height="4dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/button_minus_homeScore"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintEnd_toStartOf="@id/guideline6" />
+
+    <!--    View to divide innings from notes-->
+    <View
+        android:id="@+id/viewDivider3"
+        android:layout_width="@dimen/viewDividerWidth"
+        android:layout_height="6dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/button_minus_balls"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintEnd_toStartOf="@id/guideline6" />
+
+    <!--    Inning-->
+
+    <TextView
+        android:id="@+id/tV_inning"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:gravity="center"
+        android:text="@string/textview_inning_label"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/viewDivider" />
+
+    <Button
+        android:id="@+id/button_minus_inning"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/button_home_score_minus"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider" />
+
+    <TextView
+        android:id="@+id/tV_inningValue"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:gravity="center"
+        android:text="@string/textview_inning"
+        app:layout_constraintEnd_toStartOf="@id/guideline5"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider" />
+
+    <Button
+        android:id="@+id/button_plus_inning"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/button_home_score_plus"
+        app:layout_constraintEnd_toStartOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider" />
+
+    <!--    Outs-->
+
+    <TextView
+        android:id="@+id/tV_out"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:gravity="center"
+        android:text="@string/textview_out_label"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tV_inning" />
+
+    <Button
+        android:id="@+id/button_minus_out"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/button_home_score_minus"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/button_minus_inning" />
+
+    <TextView
+        android:id="@+id/tV_outValue"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:gravity="center"
+        android:text="@string/textview_out"
+        app:layout_constraintEnd_toStartOf="@id/guideline5"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/tV_inningValue" />
+
+    <Button
+        android:id="@+id/button_plus_out"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/button_home_score_plus"
+        app:layout_constraintEnd_toStartOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@id/button_plus_inning" />
+
+    <!--    Strikes-->
+
+    <TextView
+        android:id="@+id/tV_strike"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:gravity="center"
+        android:text="@string/textview_strike_label"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tV_out" />
+
+    <Button
+        android:id="@+id/button_minus_strike"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/button_home_score_minus"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/button_minus_out" />
+
+    <TextView
+        android:id="@+id/tV_strikeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:gravity="center"
+        android:text="@string/textview_strike"
+        app:layout_constraintEnd_toStartOf="@id/guideline5"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/tV_outValue" />
+
+    <Button
+        android:id="@+id/button_plus_strike"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/button_home_score_plus"
+        app:layout_constraintEnd_toStartOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@id/button_plus_out" />
+
+    <!--    Balls-->
+
+    <TextView
+        android:id="@+id/tV_balls"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:gravity="center"
+        android:text="@string/textview_balls_label"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tV_strike" />
+
+    <Button
+        android:id="@+id/button_minus_balls"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/button_home_score_minus"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/button_minus_strike" />
+
+    <TextView
+        android:id="@+id/tV_ballsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:gravity="center"
+        android:text="@string/textview_balls"
+        app:layout_constraintEnd_toStartOf="@id/guideline5"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/tV_strikeValue" />
+
+    <Button
+        android:id="@+id/button_plus_balls"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/button_home_score_plus"
+        app:layout_constraintEnd_toStartOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@id/button_plus_strike" />
+
+    <!--    Notes-->
+
+    <EditText
+        android:id="@+id/eT_Notes"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:autofillHints="Notes"
+        android:hint="@string/notesHint"
+        android:inputType="text|textMultiLine"
+        android:textSize="@dimen/scoreLabelTextSize"
+        android:paddingTop="3dp"
+        android:gravity="top"
+        android:maxLines="3"
+        android:scrollHorizontally="false"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintEnd_toStartOf="@id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/viewDivider3" />
+
+
+    <!--    Constraint-->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.36" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+<!--
+    The textview and button below were created by default
+
+    <TextView
+        android:id="@+id/textview_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/button_second"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/previous"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_second" />
+
+-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

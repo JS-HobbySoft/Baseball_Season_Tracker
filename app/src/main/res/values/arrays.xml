@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sortTypeEntries">
+        <item>Date</item>
+        <item>My team score</item>
+        <item>Opponent team name</item>
+        <item>Opponent team score</item>
+    </string-array>
+
+    <string-array name="sortTypeValues">
+        <item>sortDate</item>
+        <item>sortMyTeamScore</item>
+        <item>sortOppTeamName</item>
+        <item>sortOppTeamScore</item>
+    </string-array>
+
+</resources>

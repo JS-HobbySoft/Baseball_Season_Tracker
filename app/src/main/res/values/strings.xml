@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Baseball Season Tracker</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Season record</string>
+    <string name="second_fragment_label">Game Tracker</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="textview_activity_title">TextView</string>
+    <string name="button_home_score_minus">-</string>
+    <string name="button_home_score_plus">+</string>
+    <string name="editText_home_team_label">enter date</string>
+    <string name="textview_home_score_label">Home score</string>
+    <string name="textview_home_score">0</string>
+    <string name="textview_away_score_label">Away score</string>
+    <string name="textview_away_score">0</string>
+    <string name="textview_inning_label">Inning</string>
+    <string name="textview_inning">1 top</string>
+    <string name="textview_out_label">Outs</string>
+    <string name="textview_out">0</string>
+    <string name="textview_strike_label">Strike</string>
+    <string name="textview_strike">0</string>
+    <string name="textview_balls_label">Balls</string>
+    <string name="textview_balls">0</string>
+    <string name="textview_home_hits_label">Home hits</string>
+    <string name="textview_home_hits">0</string>
+    <string name="textview_away_hits_label">Away hits</string>
+    <string name="textview_away_hits">0</string>
+    <string name="fabContentDesc">add list item</string>
+    <string name="textview_label_item">Item</string>
+    <string name="imageview_placeholder">placeholder</string>
+    <string name="game_label">Date:</string>
+    <string name="home_score">Home:</string>
+    <string name="away_score">MMMMMMMM:</string>
+    <string name="appbar_done">Save</string>
+    <string name="pref_team_name_input">Enter your team name (8 characters max)</string>
+    <string name="toastBadName">Team name too long</string>
+    <string name="teamNameFormatted">%s:</string>
+    <string name="tvRunsLabel">Runs</string>
+    <string name="hitsLabel">Hits</string>
+    <string name="OpponentName">enter team</string>
+    <string name="listPreferenceTitle">enter sort option</string>
+    <string name="sortDescOrderTitle">Sort in descenting order</string>
+    <string name="notesHint">Enter notes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gameDetailRecord">Game Detail Record</string>
+    <string name="buttonDeleteString">Del</string>
+    <string name="gameDetailString">Game detail</string>
+
+</resources>

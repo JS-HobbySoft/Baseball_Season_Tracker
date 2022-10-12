@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="game"
+            type="org.jshobbysoft.baseballseasontracker.GameViewModel" />
+
+        <variable
+            name="clickListener"
+            type="org.jshobbysoft.baseballseasontracker.GameListener" />
+
+    </data>
+
+
+    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        app:cardElevation="6dp"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/textViewLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/textview_label_item"
+                android:textSize="@dimen/cardViewDesignGameTextSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/myTeamNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/home_score"
+                android:textSize="@dimen/cardViewDesignGameTextSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewHomeScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/textview_label_item"
+                android:textSize="@dimen/cardViewDesignGameTextSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/awayTeamNameView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/away_score"
+                android:textSize="@dimen/cardViewDesignGameTextSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewAwayScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/textview_label_item"
+                android:textSize="@dimen/cardViewDesignGameTextSize"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
