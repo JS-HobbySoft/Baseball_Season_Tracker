@@ -36,7 +36,8 @@ class SecondFragment : Fragment() {
     private var balls = 0
     private val innings = listOf("1 top","1 bottom","2 top","2 bottom","3 top","3 bottom","4 top","4 bottom",
         "5 top","5 bottom","6 top","6 bottom","7 top","7 bottom","8 top","8 bottom",
-        "9 top","9 bottom")
+        "9 top","9 bottom","10 top","10 bottom","11 top","11 bottom","12 top","12 bottom",
+        "13 top","13 bottom","14 top","14 bottom","15 top","15 bottom")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
