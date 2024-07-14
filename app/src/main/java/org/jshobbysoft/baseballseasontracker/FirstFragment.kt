@@ -15,6 +15,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import org.jshobbysoft.baseballseasontracker.databinding.FragmentFirstBinding
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -68,7 +71,7 @@ class FirstFragment : Fragment() {
         if (sortInDescOrder) {
             when (val sortOptionFromSettings =
                 sharedPreferences?.getString("sortOptionKey", "sortDate")) {
-                "sortDate" -> dataGame.sortByDescending { it.gameInfo }
+                "sortDate" -> dataGame.sortByDescending { it.gameInfo.toDate() }
                 "sortMyTeamScore" -> dataGame.sortByDescending { it.homeScore.toInt() }
                 "sortOppTeamName" -> dataGame.sortByDescending { it.awayTeamName }
                 "sortOppTeamScore" -> dataGame.sortByDescending { it.awayScore.toInt() }
@@ -77,7 +80,7 @@ class FirstFragment : Fragment() {
         } else {
             when (val sortOptionFromSettings =
                 sharedPreferences?.getString("sortOptionKey", "sortDate")) {
-                "sortDate" -> dataGame.sortBy { it.gameInfo }
+                "sortDate" -> dataGame.sortBy { it.gameInfo.toDate() }
                 "sortMyTeamScore" -> dataGame.sortBy { it.homeScore.toInt() }
                 "sortOppTeamName" -> dataGame.sortBy { it.awayTeamName }
                 "sortOppTeamScore" -> dataGame.sortBy { it.awayScore.toInt() }
@@ -133,4 +136,10 @@ class FirstFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    // https://stackoverflow.com/questions/62912390/efficient-way-to-sort-dates-with-their-values-in-a-json-array-in-kotlin
+    private fun String.toDate(): Date? {
+        return SimpleDateFormat("MM/dd/yyyy", Locale.getDefault()).parse(this)
+    }
+
 }
